@@ -1,0 +1,39 @@
+SHORT INSTALLATION GUIDE FOR OCRAM -PLUGINS:
+
+These are generic instructions and all OcRam -plugins are included.
+Please just ignore instructions considering plugin(s) you don't use.
+
+1. Get plugins you like from https://ocram-codes.net
+   (Recommended to get MZ versions even for MV! - Just see part 11)
+
+2. Install downloaded plugins (https://www.rpgmakerweb.com/blog/using-plugins-in-mz) 
+   or for MV (https://www.rpgmakerweb.com/blog/beginners-guide-to-plugins-part1)
+
+3. If time system, weather system, battle core or indicators are used:
+   3.1 Get https://ocram-codes.net/download.aspx?folder=misc&file=OcRam_Images&type=zip
+   3.2 Unzipit to .\img\ocram -folder in your project
+
+4. Setup / check time system variables and switches (defaults to 1-9 variables and 1-5 switches)
+
+5. Recommended to set or check Weather System "Weather Variable" (defaults to 10)
+
+6. Setup event OcRam_Events bases map (either change map id or reserve map id 1 for event bases)
+
+7. Recommended to set or check OcRam_Lights "Lights KILL switch" (default 6)
+
+8. Default regions 16-22 (reserved for OcRam_Passages for higher/lower passability etc...) 
+   and 41-51 (reserved for OcRam_Core passabilities)
+
+9. If Local Coop is used it is VERY IMPORTANT to set "Player in turn variable" 
+   (defaults to 0 because it must be manually set (to ensure you know which variable it is))
+   NOTE: Do NOT edit value of this variable in-game (plugin will control this variable alone)
+
+10. Fine tune parameters as you like! And see example of default variables and switches after setup.
+
+11. NOTE: If you are using MV and want to use MZ plugins - REMEMBER TO USE RETRO.js!
+    11.1. Get it from: https://forums.rpgmakerweb.com/index.php?threads/retro.135715/
+    11.2. For MZ like plugin commands in MV use:
+          https://forums.rpgmakerweb.com/index.php?threads/retro-plugin-command-ui.137124/
+    11.3. Install RETRO.js before any other MZ plugin!
+
+12. Enjoy RPG Making!

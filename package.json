@@ -1,10 +1,10 @@
 {
     "name": "rmmz-game",
     "main": "index.html",
-    "chromium-args": "--force-color-profile=srgb --disable-devtools",
+    "chromium-args": "--force-color-profile=srgb",
     "window": {
-        "title": "ANETZ",
-        "width": 816,
+        "title": "OcRam -plugins",
+        "width": 1104,
         "height": 624,
         "position": "center",
         "icon": "icon/icon.png"

@@ -1,20 +1,20 @@
 //=============================================================================
-// main.js v1.2.0
+// main.js v1.5.0
 //=============================================================================
 
 const scriptUrls = [
-     "js/libs/pixi.js",
-     "js/libs/pako.min.js",
-     "js/libs/localforage.min.js",
-     "js/libs/effekseer.min.js",
-     "js/libs/vorbisdecoder.js",
-     "js/rmmz_core.js",
-     "js/rmmz_managers.js",
-     "js/rmmz_objects.js",
-     "js/rmmz_scenes.js",
-     "js/rmmz_sprites.js",
-     "js/rmmz_windows.js",
-     "js/plugins.js"
+    "js/libs/pixi.js",
+    "js/libs/pako.min.js",
+    "js/libs/localforage.min.js",
+    "js/libs/effekseer.min.js",
+    "js/libs/vorbisdecoder.js",
+    "js/rmmz_core.js",
+    "js/rmmz_managers.js",
+    "js/rmmz_objects.js",
+    "js/rmmz_scenes.js",
+    "js/rmmz_sprites.js",
+    "js/rmmz_windows.js",
+    "js/plugins.js"
 ];
 const effekseerWasmUrl = "js/libs/effekseer.wasm";
 
@@ -28,6 +28,7 @@ class Main {
     run() {
         this.showLoadingSpinner();
         this.testXhr();
+        this.hookNwjsClose();
         this.loadMainScripts();
     }
 
@@ -52,6 +53,14 @@ class Main {
         xhr.open("GET", document.currentScript.src);
         xhr.onload = () => (this.xhrSucceeded = true);
         xhr.send();
+    }
+
+    hookNwjsClose() {
+        // [Note] When closing the window, the NW.js process sometimes does
+        //   not terminate properly. This code is a workaround for that.
+        if (typeof nw === "object") {
+            nw.Window.get().on("close", () => nw.App.quit());
+        }
     }
 
     loadMainScripts() {
@@ -125,7 +134,7 @@ class Main {
         // [Note] We cannot save the game properly when Gatekeeper Path
         //   Randomization is in effect.
         return (
-            Utils.isNwjs() &&
+            typeof process === "object" &&
             process.mainModule.filename.startsWith("/private/var")
         );
     }
@@ -150,59 +159,3 @@ const main = new Main();
 main.run();
 
 //-----------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

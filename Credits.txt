@@ -1,0 +1,12 @@
+RPG Maker MZ
+©Gotcha Gotcha Games Inc./YOJI OJIMA 2020
+
+MV assets (for Monster2 and Parallax map)
+©2015 KADOKAWA CORPORATION./YOJI OJIMA
+
+AltMenuScreen.js: Yoji Ojima
+
+Audio, BGS (Birds): Alexander
+Full Moon by Doodlebug (edits made to fit parallax) - https://cleanpublicdomain.com/
+
+Bangers FONT by Vernon Adams (SIL Open Font License)
